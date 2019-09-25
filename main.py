@@ -9,10 +9,11 @@ from datetime import timedelta
 load_dotenv()
 SLACK_URL = 'https://slack.com/api/chat.postMessage'
 CHANNEL = os.getenv('SLACK_CHANNEL')
+print(str(CHANNEL))
 TOKEN = os.getenv('SLACK_TOKEN')
 HEADERS = {
   'content-type': 'application/json',
-  'authorization': f'Bearer {os.getenv("SLACK_TOKEN")}'
+  'authorization': f'Bearer {TOKEN}'
 }
 
 URLS = {
@@ -90,6 +91,7 @@ def main():
       'charset':'utf8'
     }
   ), headers=HEADERS).text)
+  print(str(ret))
   thread_id = ret['ts']
   for (restaurant, url) in URLS.items():
     try:
