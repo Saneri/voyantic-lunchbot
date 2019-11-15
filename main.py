@@ -17,7 +17,7 @@ HEADERS = {
 }
 
 URLS = {
-  'Knitter': "https://www.ravintolaknitter.fi/fi/lounas",
+  'Knitter': "https://www.lounaat.info/lounas/knitter/espoo",
   'Bluebell': "https://www.lounaat.info/lounas/bluebell/espoo",
   'Limetti':"https://www.lounaat.info/lounas/limetti-sushi/espoo",
   #'Factory': "http://www.ravintolafactory.com/lounasravintolat/ravintolat/espoo-leppavaara/",
@@ -45,19 +45,7 @@ def parse(html_txt, weekday, restaurant):
   try:
     amica_tags = SoupStrainer(id='menu')
     tag = amica_tags        # Default to lounaat.info
-    if (restaurant == 'Knitter'):
-      soup = BeautifulSoup(html_txt, 'html.parser')
-      raw_html = soup.findAll(lambda tag: tag.name == "p")
-      html = ''
-      if weekday_int() == 4:
-        html = "Error"
-      else:
-        html = str(raw_html[dt.today().weekday()])
-      html = html.replace('<p>', '')
-      html = html.replace('</p>', '')
-      html = html.replace('<br/>', '\n')
-      return html
-    elif (restaurant == 'Factory'):
+    if (restaurant == 'Factory'):
       # Load whole page since Factory has no good ids to parse into
       soup = BeautifulSoup(html_txt, 'html.parser')
       # Find parent of lounaslista text, which holds whole week in multiple <p>'s (*sigh :( )
