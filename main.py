@@ -20,8 +20,7 @@ URLS = {
   'Knitter': "https://www.lounaat.info/lounas/knitter/espoo",
   'Bluebell': "https://www.lounaat.info/lounas/bluebell/espoo",
   'Limetti':"https://www.lounaat.info/lounas/limetti-sushi/espoo",
-  #'Factory': "http://www.ravintolafactory.com/lounasravintolat/ravintolat/espoo-leppavaara/",
-  #'Amica-kutoja':"https://www.lounaat.info/lounas/amica-kutoja/espoo"
+  'Happy Friends':"https://www.lounaat.info/lounas/happy-friends/helsinki",
 }
 
 WEEKDAYS = [
