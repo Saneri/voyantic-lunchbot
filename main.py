@@ -21,6 +21,7 @@ URLS = {
     'Bluebell': "https://www.lounaat.info/lounas/bluebell/espoo",
     'Happy Friends': "https://www.lounaat.info/lounas/happy-friends/espoo",
     'Sodexo Täyttymys': "https://www.lounaat.info/lounas/sodexo-tyttymys/espoo",
+    'Amica Sinitähti': "https://www.lounaat.info/lounas/amica-ravintola-sinitahti/espoo"
 }
 
 WEEKDAYS = [
